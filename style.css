@@ -1,32 +1,65 @@
+
+/* Black #282c37   GreyBlue #9baec8  Grey #d9e1e8    Blue #2b90d9*/
+
+
 body {
     font-family:  Helvetica, Arial, sans-serif;
     margin: 0px;
-    font-size: 1.5vw;
+    font-size: 16px;
+    background-color: #282c37;
+    color: #d9e1e8;
 }
 
 #logo {
-    margin: 0px;
-    padding: 8px;
+    margin: 0vh;
+    font-size: 4vw;
+    padding: 2vh;
     font-family: "Fredoka One", sans-serif;
-    width: 16%;
     -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-color: #282c37;
+    grid-area: h1;
+    color: #d9e1e8;
+}
+
+#tag-line{
+    grid-area: h2;
+    margin-top: 0%;
+    text-align: left;
+    padding: 2%;
+    font-size: 2vw;
+    color: #d9e1e8;
+    -webkit-text-stroke-width: 1.2px;
+    -webkit-text-stroke-color: #282c37;
 }
 
 ul {
     margin: 0px;
 }
 body > header {
-    background-color: orange;
-    color: white;
-    display:flex;
-    height: 12vh;
-    align-items: center;
-    justify-content: space-around;
+    display: grid;
+    grid-template-areas: 
+    "h1 nav"
+    "h2 h3"
+    ;
+    background: repeating-linear-gradient(
+        90deg, /* Vertical stripes */
+        black, /* First color */
+        black 40px, /* Width of the black stripe */
+        white 40px, /* Start white after 20px */
+        white 80px /* End white at 40px */
+    );
+    height: 22vh;
 }
 
 #nav-ul{
     display:flex;
+    grid-area: nav;
+    padding-top: 8px;
+}
+
+.asidebutton {
+    color: #d9e1e8;
+    text-decoration: none;
 }
 
 #nav-ul > li{
@@ -40,10 +73,11 @@ body > header > nav > ul {
 }
 
 .navbutton {
-    color:  white;
+    color:  #d9e1e8;
     text-decoration: none;
     padding: 12px;
-    border: 1px solid white;
+    background-color: #282c37;
+    border: 1px solid #282c37;
     border-radius: 10%;
 }
 
@@ -61,6 +95,136 @@ body > main article {
     width: 70%;
 }
 
+#main-article > div {
+    display: grid;
+    grid-template-areas: 
+    "alpic altit"
+    "alpic alpara"
+    "cppic cptit"
+    "cppic cppara"
+    "hanpic hantit"
+    "hanpic hanpara"
+    "mompic momtit"
+    "mompic mompara"
+    "dnppic dnptit"
+    "dnppic dnppara"
+    "tynepic tynetit"
+    "tynepic tynepara"
+    "nqpic nqtit"
+    "nqpic nqpara"
+    "nopic notit"
+    "nopic nopara"
+    "bluepic bluetit"
+    "bluepic bluepara"
+    ;
+    column-gap: 20px;
+}
+
+#alpic {
+    grid-area: alpic;
+}
+
+#altit {
+    grid-area: altit;
+}
+
+#alpara {
+    grid-area: alpara;
+}
+
+#cppic {
+    grid-area: cppic;
+}
+
+#cptit {
+    grid-area: cptit;
+}
+
+#cppara {
+    grid-area: cppara;
+}
+
+#hanpic {
+    grid-area: hanpic;
+}
+
+#hantit {
+    grid-area: hantit;
+}
+
+#hanpara {
+    grid-area: hanpara;
+}
+
+#mompic {
+    grid-area: mompic;
+}
+
+#momtit {
+    grid-area: momtit;
+}
+
+#mompara {
+    grid-area: mompara;
+}
+
+#dnppic {
+    grid-area: dnppic;
+}
+
+#dnptit {
+    grid-area: dnptit;
+}
+
+#dnppara {
+    grid-area: dnppara;
+}
+
+#tynepic {
+    grid-area: tynepic;
+}
+
+#tynetit {
+    grid-area: tynetit;
+}
+
+#tynepara {
+    grid-area: tynepara;
+}
+#nqpic {
+    grid-area: nqpic;
+}
+
+#nqtit {
+    grid-area: nqtit;
+}
+
+#nqpara {
+    grid-area: nqpara;
+}
+
+#nopic {
+    grid-area: nopic;
+}
+
+#notit {
+    grid-area: notit;
+}
+
+#nopara {
+    grid-area: nopara;
+}
+#bluepic {
+    grid-area: bluepic;
+}
+
+#bluetit {
+    grid-area: bluetit;
+}
+
+#bluepara {
+    grid-area: bluepara;
+}
 form {
     text-align: center;
 }
@@ -69,8 +233,18 @@ h2 {
     text-align: center;
 }
 
+#author{   
+    text-align: left;
+}
+
 body > footer {
-    background-color: orange;
+    background: repeating-linear-gradient(
+        90deg, /* Vertical stripes */
+        black, /* First color */
+        black 40px, /* Width of the black stripe */
+        white 40px, /* Start white after 20px */
+        white 80px /* End white at 40px */
+    );
     display: flex;
 }
 
@@ -80,19 +254,30 @@ img {
 
 #footer-ul {
     display: flex;
-    list-style: none;
+    margin-top: 1vh;
+    background-color: #282c37;
+    padding-left: 0%;
+    margin-left: 8px;
+    border-radius: 3%;
 
 }
 
 #footer-ul > div > li {
-    margin-left: 12px;
+    margin-left: 2vw;
+    margin-right: 1vw;
 }
 
 #footer-ul > div > li > a {
-    color: white;
+    color: #d9e1e8;
     text-decoration: none;
 }
 
-
+#footer-logo{
+    font-family: "Fredoka One", sans-serif;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #282c37;
+    color: #d9e1e8;
+    margin-left: 1vw;
+}
 
 
